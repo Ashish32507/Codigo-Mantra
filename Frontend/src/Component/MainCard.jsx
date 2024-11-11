@@ -15,7 +15,7 @@ function MainCard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/blog/allpost");
+        const response = await axios.get("https://codigo-mantra-backend.onrender.com/blog/allpost");
         setPosts(response.data.posts || []);
         setFilteredPosts(response.data.posts || []); // Initially display all posts
         console.log(response.data.posts);
