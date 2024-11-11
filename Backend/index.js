@@ -11,7 +11,7 @@ dotenv.config();
 const PORT = process.env.PORT || 3000;
 
 const corsOption = {
-  origin: "http://localhost:5173",
+  origin: "https://codigo-mantra.vercel.app",
   credentials: true,
 };
 
