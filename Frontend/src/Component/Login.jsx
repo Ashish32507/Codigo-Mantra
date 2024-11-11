@@ -21,7 +21,7 @@ function Login() {
     try {
       console.log("Attempting login with:", { email, password });
       const response = await axios.post(
-        "http://localhost:4000/user/login",
+        "https://codigo-mantra-backend.onrender.com/user/login",
         { email, password },
         {
           headers: {
