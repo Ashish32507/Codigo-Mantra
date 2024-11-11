@@ -11,7 +11,7 @@ const Comments = ({ id }) => {
     const fetchComments = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/comment/allcomment/${id}`
+          `https://codigo-mantra-backend.onrender.com/comment/allcomment/${id}`
         );
         setComments(response.data.comments || []);
       } catch (error) {
