@@ -16,7 +16,7 @@ function DetailPage() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/blog/${id}`);
+        const response = await axios.get(`https://codigo-mantra-backend.onrender.com/blog/${id}`);
         setPost(response.data.posts);
         console.log(response.data);
       } catch (err) {
