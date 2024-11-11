@@ -30,7 +30,7 @@ const AddComment = ({ id }) => {
 
     try {
       const response = await axios.post(
-        `http://localhost:4000/comment/new/${id}`,
+        `https://codigo-mantra-backend.onrender.com/comment/new/${id}`,
         commentData
       );
 
