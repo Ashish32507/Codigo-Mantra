@@ -37,7 +37,7 @@ function Signup() {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/user/newuser",
+        "https://codigo-mantra-backend.onrender.com/user/newuser",
         formData,
         {
           headers: {
