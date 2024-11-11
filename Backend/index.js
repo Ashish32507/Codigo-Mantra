@@ -23,7 +23,7 @@ app.use("/user", UserRoutes);
 app.use("/blog", BlogRoutes);
 app.use("/comment", CommentRoutes);
 
+ dbConnection();
 app.listen(PORT, () => {
   console.log(`Your Server Is Runing On Port ${PORT}`);
-  dbConnection();
 });
