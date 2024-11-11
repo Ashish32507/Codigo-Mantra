@@ -10,12 +10,18 @@ import cookieParser from "cookie-parser";
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 
-const corsOption = {
-  origin: "https://codigo-mantra.vercel.app",
-  credentials: true,
-};
+const allowedOrigins = ['http://localhost:5173', 'https://codigo-mantra.vercel.app'];
+app.use(cors({
+  origin: function (origin, callback) {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 
-app.use(cors(corsOption));
+app.use(cors(allowedOrigins));
 
 app.use(express.json());
 app.use(cookieParser());
