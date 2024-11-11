@@ -21,7 +21,7 @@ function UserPost() {
         }
 
         const response = await axios.get(
-          "http://localhost:4000/blog/userpost",
+          "https://codigo-mantra-backend.onrender.com/blog/userpost",
           {
             headers: {
               Authorization: `Bearer ${token}`, // Include token in the request header
