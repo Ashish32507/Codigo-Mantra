@@ -19,7 +19,7 @@ const NewPost = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/blog/newpost",
+        "https://codigo-mantra-backend.onrender.com/blog/newpost",
         {
           title,
           description,
